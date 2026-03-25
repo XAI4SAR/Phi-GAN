@@ -22,10 +22,30 @@ The proposed $\Phi$-GAN framework overview.
 
 2.Getting Started
 ------- 
-### 2.1 Requirements
-Code is based on an  object detection YOLOv5. Please refer to [requirements.txt](https://github.com/ultralytics/yolov5/blob/master/requirements.txt) for installation and dataset preparation.
+### 2.1 Data
+MSTAR dataset is used in the experiment. Dictionary and pre-trained weights for physics-inspired neural module can be downloaded from link https://pan.baidu.com/s/14vAiB4OicQFMQ1DNCGgEvQ?pwd=h826. 
 
 
+### 2.2 Training
+To train a $\Phi$-GAN model, run the following command:
+```
+python train.py \
+   --bs 32 \
+   --lrg 0.0001 \
+   --lrd 0.0001 \
+   --num_epochs 2000 \
+   --save_dir ${SAVE_PATH} \
+   --train_txt 'train.txt'\
+   --d_mat 'D_80*80_image_domain.mat'\
+   --d_h_mat 'D_80*80_image_domain_H.mat'\
+   --inv_d_mat 'D_80*80_image_domain_Inv_norm.mat'\
+   --f_est 'HQS_epoch_30.pth'
+```
+### 2.3 Generating
+After training stage, run the following command to generate SAR target images with given label and angle information.
+```
+python generate.py
+```
 
 3.Citation
 ------- 
