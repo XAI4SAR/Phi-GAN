@@ -151,9 +151,6 @@ def train(config):
 
 
 
-    # D_deep_H = sio.loadmat('/STAT/zxd/work/Generation/GAN/phigan/code/phigan/D_80*80_image_domain_H.mat')['D_H']
-    # D_deep = sio.loadmat('/STAT/zxd/work/Generation/GAN/phigan/code/phigan/D_80*80_image_domain.mat')['D']
-    # Inv_D = sio.loadmat('/STAT/zxd/work/Generation/GAN/phigan/code/phigan/D_80*80_image_domain_Inv_norm.mat')['Inv_D']
     D_deep_H = sio.loadmat(d_h_mat)['D_H']
     D_deep = sio.loadmat(d_mat)['D']
     Inv_D = sio.loadmat(inv_d_mat)['Inv_D']
@@ -165,7 +162,6 @@ def train(config):
     D_deep_H = D_deep_H.cuda()
     Inv_D = Inv_D.cuda()
     model_du = model_HQS.HQS_iteration_model(D = D_deep, T = 2, W = D_deep_H, D_D_H_inv = Inv_D,alpha=0.0001, theta=0.0001, mu = 0.0001)
-    # model_du.load_state_dict(torch.load('/STAT/zxd/work/Generation/GAN/phigan/code/phigan/HQS_epoch_30.pth'))
     model_du.load_state_dict(torch.load(f_est))
    
     model_du.eval()
