@@ -23,7 +23,7 @@ The proposed $\Phi$-GAN framework overview.
 2.Getting Started
 ------- 
 ### 2.1 Data
-MSTAR dataset is used in the experiments. Dictionary and pre-trained weights for physics-inspired neural module can be downloaded from the link https://pan.baidu.com/s/14vAiB4OicQFMQ1DNCGgEvQ?pwd=h826. 
+MSTAR dataset is used in the experiments. Dictionary and pre-trained weights for physics-inspired neural module can be downloaded from the link https://drive.google.com/drive/folders/1Yl_eupJBl1P_1CNB9q4i4xXlxJbPPRvc?usp=drive_link. 
 
 
 ### 2.2 Training
