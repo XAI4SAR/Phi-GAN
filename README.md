@@ -53,7 +53,7 @@ If you find this repository useful for your publications, please consider citing
 
 ```
 @inproceedings{zhang2025ph,
-  title={Ph-GAN: Physics-inspired GAN for generating SAR images under limited data},
+  title={$\Phi$-GAN: Physics-inspired GAN for generating SAR images under limited data},
   author={Zhang, Xidan and Zhuang, Yihan and Guo, Qian and Yang, Haodong and Qian, Xuelin and Cheng, Gong and Han, Junwei and Huang, Zhongling},
   booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
   pages={29075--29085},
