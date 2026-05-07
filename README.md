@@ -25,6 +25,17 @@ The proposed $\Phi$-GAN framework overview.
 ### 2.1 Data
 MSTAR dataset is used in the experiments. Dictionary and pre-trained weights for physics-inspired neural module can be downloaded from the link https://drive.google.com/drive/folders/1Yl_eupJBl1P_1CNB9q4i4xXlxJbPPRvc?usp=sharing. 
 
+The MSTAR 10-class data should be organized as follows:
+```
+data/
+  MSTAR_10CLASS/
+    TRAIN_17deg/
+    mstar_10%_train.txt
+    mstar_5%_train.txt
+    mstar_gen_all.txt
+```
+
+`TRAIN_17deg/` contains the training images and is about 700 MB. Because the dataset is large, upload it with Git LFS if it needs to be stored in this repository, or provide it through an external download link and place it under `./data/MSTAR_10CLASS/TRAIN_17deg/` after downloading.
 
 ### 2.2 Training
 To train a $\Phi$-GAN model, run the following command:
@@ -41,6 +52,9 @@ python train.py \
    --inv_d_mat 'D_80*80_image_domain_Inv_norm.mat'\
    --f_est 'HQS_epoch_30.pth'
 ```
+
+For limited-data training on the MSTAR 10-class dataset, set `--train_txt` to the corresponding file under `./data/MSTAR_10CLASS/`. For 10% MSTAR training, use `./data/MSTAR_10CLASS/mstar_10%_train.txt`; for 5% MSTAR training, use `./data/MSTAR_10CLASS/mstar_5%_train.txt`.
+
 ### 2.3 Generating
 After training stage, run the following command to generate SAR target images with given label and angle information.
 ```

@@ -23,7 +23,7 @@ data_transforms = transforms.Compose([
         transforms.ToTensor(),
 ])
 
-dataset_test = mstar_dataset.MSTAR_Dataset(txt_file='../data/test.txt',
+dataset_test = mstar_dataset.MSTAR_Dataset(txt_file='./data/MSTAR_10CLASS/mstar_gen_all.txt',
                                             transform=data_transforms,
                                             )
 # dataloader_train = DataLoader(dataset_train, batch_size=32,shuffle=True,num_workers=8)
