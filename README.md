@@ -35,7 +35,15 @@ data/
     mstar_gen_all.txt
 ```
 
-`TRAIN_17deg/` contains the training images and is about 700 MB. Because the dataset is large, upload it with Git LFS if it needs to be stored in this repository, or provide it through an external download link and place it under `./data/MSTAR_10CLASS/TRAIN_17deg/` after downloading.
+The full `TRAIN_17deg/` training data is about 700 MB and is not tracked by Git. It can be downloaded from the GitHub Release:
+
+[TRAIN_17deg.zip](https://github.com/XAI4SAR/Phi-GAN/releases/download/mstar-data-v1/TRAIN_17deg.zip)
+
+Alternatively, users may obtain the `TRAIN_17deg/` data from their own source and place the extracted folder under the same path.
+
+After downloading, unzip it and place the folder as:
+`./data/MSTAR_10CLASS/TRAIN_17deg/`
+
 
 ### 2.2 Training
 To train a $\Phi$-GAN model, run the following command:
